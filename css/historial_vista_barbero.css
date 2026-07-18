@@ -1,0 +1,140 @@
+.tabs {
+
+    margin: 30px;
+    text-align: center;
+}
+
+.contenedor-historial {
+    border-radius: 5px;
+    width: 90%;
+    margin: 30px auto;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.titulo {
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    margin: 0;
+}
+
+.cita {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 2fr 1fr;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #000;
+}
+
+.cita:last-child {
+    border-bottom: none;
+}
+
+.info p,
+.ubicacion p,
+.servicio p {
+    margin: 4px 0;
+}
+
+.servicio {
+    text-align: left;
+}
+
+.accion {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.rating {
+    float: left;
+}
+
+/* :not(:checked) es un filtro, 
+por lo que los navegadores que no admiten :checked no siguen estas reglas. 
+Todos los navegadores que admiten :checked también admiten :not(), 
+por lo que la prueba no es innecesariamente selectiva. */
+.rating:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+    clip: rect(0, 0, 0, 0);
+}
+
+.rating:not(:checked)>label {
+    float: right;
+    width: 1em;
+    padding: 0 .1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 200%;
+    line-height: 1.2;
+    color: #ddd;
+    text-shadow: 1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0, 0, 0, .5);
+}
+
+.rating:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rating>input:checked~label {
+    color: #f70;
+    text-shadow: 1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0, 0, 0, .5);
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0, 0, 0, .5);
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+    color: #ea0;
+    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0, 0, 0, .5);
+}
+
+.rating>label:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+/* end of Lea's code */
+
+/*
+ * Clearfix from html5 boilerplate
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    zoom: 1;
+}
+
+/* my stuff */
+#status,
+button {
+    margin: 20px 0;
+}
