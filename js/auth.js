@@ -17,10 +17,10 @@ function renderAuth() {
       rutaPerfil = "#";
     }
     else if (usuario.rol === "Barbero") {
-      rutaPerfil = "/html/barbero/perfil_info_barbero.html";
+      rutaPerfil = "../../html/barbero/perfil_info_barbero.html";
     }
     else {
-      rutaPerfil = "/html/cliente/perfil_cliente.html";
+      rutaPerfil = "../../html/cliente/perfil_cliente.html";
     }
 
     zona.innerHTML = `
@@ -35,10 +35,10 @@ function renderAuth() {
   }
   else {
     zona.innerHTML = `
-      <a href="/html/incio_Sesion/inicioSesion.html" class="btn btn-outline-light me-2">
+      <a href="/html/incio_Sesion/inicioSesion.html" class="btn btn-outline-light me-2 nav-item-login">
         Iniciar Sesión
       </a>
-      <a href="/html/incio_Sesion/registro.html" class="btn btn-outline-light">
+      <a href="/html/incio_Sesion/registro.html" class="btn btn-outline-light nav-item">
         Registrarse
       </a>
     `;
@@ -47,7 +47,7 @@ function renderAuth() {
 
 function cerrarSesion() {
   localStorage.removeItem("usuario");
-  window.location.href = "/html/pantallaInicio.html";
+  window.location.href = "../../html/pantallaInicio.html";
 }
 
 
